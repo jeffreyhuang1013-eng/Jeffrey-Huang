@@ -1,0 +1,7 @@
+{
+  "name": "XStudio Intelligence",
+  "description": "专为中国大陆用户定制的AI网关，智能路由至 Deepseek、通义千问、豆包和可灵 AI。",
+  "requestFramePermissions": [
+    "microphone"
+  ]
+}

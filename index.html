@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>XStudio Intelligence</title>
+    <!-- KaTeX CSS for math rendering -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+    <!-- Tailwind with Typography plugin -->
+    <script src="https://cdn.tailwindcss.com?plugins=typography"></script>
+    <script>
+      tailwind.config = {
+        darkMode: 'class',
+        theme: {
+          extend: {
+            colors: {
+              // Apple System Colors Simulation
+              sidebar: {
+                light: '#f5f5f7', // macOS Finder/Mail Sidebar Gray
+                dark: '#1c1c1e',  // macOS Dark Mode Sidebar
+              },
+              base: {
+                light: '#ffffff',
+                dark: '#000000',  // OLED/True Black
+              },
+              divider: {
+                light: '#e5e5e5',
+                dark: '#2c2c2e',
+              },
+              gray: {
+                750: '#2d2d3a',
+                850: '#1a1a20',
+                950: '#0f0f12',
+              }
+            }
+          }
+        }
+      }
+    </script>
+    <style>
+      ::-webkit-scrollbar {
+        width: 8px;
+        height: 8px;
+      }
+      ::-webkit-scrollbar-track {
+        background: transparent; 
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #d1d1d6;
+        border-radius: 4px;
+      }
+      .dark ::-webkit-scrollbar-thumb {
+        background: #48484a;
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background: #aeaeb2; 
+      }
+      .dark ::-webkit-scrollbar-thumb:hover {
+        background: #636366;
+      }
+      /* Tweak prose spacing for chat bubbles */
+      .prose p {
+        margin-top: 0.5em;
+        margin-bottom: 0.5em;
+      }
+      .prose :first-child {
+        margin-top: 0;
+      }
+      .prose :last-child {
+        margin-bottom: 0;
+      }
+      .prose pre {
+        background-color: #2d2d3a;
+        color: #e5e5e5;
+        border-radius: 0.5rem;
+        padding: 0.75rem;
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react/": "https://aistudiocdn.com/react@^19.2.1/",
+    "react": "https://aistudiocdn.com/react@^19.2.1",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.1/",
+    "react-dom": "https://aistudiocdn.com/react-dom@^19.2.1",
+    "uuid": "https://aistudiocdn.com/uuid@^13.0.0",
+    "@google/genai": "https://aistudiocdn.com/@google/genai@^1.31.0",
+    "lucide-react": "https://aistudiocdn.com/lucide-react@^0.556.0",
+    "react-markdown": "https://esm.sh/react-markdown@9?bundle&external=react,react-dom",
+    "remark-math": "https://esm.sh/remark-math@6?bundle",
+    "rehype-katex": "https://esm.sh/rehype-katex@7?bundle"
+  }
+}
+</script>
+</head>
+  <body class="bg-base-light dark:bg-base-dark text-zinc-900 dark:text-gray-100 overflow-hidden transition-colors duration-300 antialiased selection:bg-blue-500 selection:text-white">
+    <div id="root"></div>
+  </body>
+</html>
